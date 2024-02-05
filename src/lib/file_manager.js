@@ -138,8 +138,8 @@ export async function fileManger(username) {
   }
 
   rl.on("line", async (line) => {
-    whereAmI(process.cwd());
     detectCommand(line);
+    whereAmI(process.cwd());
   });
   rl.on("SIGINT", () => {
     close();
